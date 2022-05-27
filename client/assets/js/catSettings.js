@@ -3,7 +3,7 @@ var colors = Object.values(allColors())
 
 var defaultDNA = {
     "headcolor" : 33,
-    "mouthColor" : 13,
+    "mouthColor" : 20,
     "eyesColor" : 74,
     "earsColor" : 23,
     //Cattributes
@@ -55,6 +55,8 @@ function renderCat(dna){
     $('#eyesColor').val(dna.eyesColor)
     earsColor(colors[dna.earsColor],dna.earsColor)
     $('#earsColor').val(dna.earsColor)
+    mouthColor(colors[dna.mouthColor],dna.mouthColor)
+    $('#mouthColor').val(dna.mouthColor)
 }
 
 // Changing cat colors
@@ -71,4 +73,9 @@ $('#eyesColor').change(()=>{
 $('#earsColor').change(()=>{
   var colorVal = $('#earsColor').val()
   earsColor(colors[colorVal],colorVal)
+})
+
+$('#mouthColor').change(()=>{
+  var colorVal = $('#mouthColor').val()
+  mouthColor(colors[colorVal],colorVal)
 })

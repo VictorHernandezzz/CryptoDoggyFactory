@@ -36,6 +36,14 @@ function earsColor(color,code) {
     $('#dnaears').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
 
+//This function is for the color of the patch and mustache
+function mouthColor(color,code) {
+    $('.mouth').css('background', '#' + color)  //This changes the color of the eyes
+    $('.mouth').css('border', '5px ' + 'solid ' + '#' + color)
+    $('#mouthcode').html('code: ' + code) //This updates text of the badge next to the slider
+    $('#dnamouth').html(code) //This updates the body color part of the DNA that is displayed below the cat
+}
+
 
 //###################################################
 //Functions below will be used later on in the project

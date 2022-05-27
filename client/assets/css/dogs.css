@@ -57,23 +57,6 @@ body {
     margin: auto;
     overflow: hidden;
 }
-/*patch*/
-.dog:after, .head:after{
-    content: '';
-    width: 69px;
-    height: 80px;
-    border-radius: 50%;
-    background: #89766c;
-    position: absolute;
-}
-.dog:after{
-    left: 10px;
-    bottom: 69px;
-}
-.head:after{
-    left: -13;
-    bottom: -7px;
-}
 .eyes{
     width: 16px;
     height: 16px;
@@ -123,7 +106,6 @@ body {
     height: 25px;
     background: #9a7b6a;
     border: 5px solid #9a7b6a;
-    border-top: 0;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     position: absolute;
@@ -134,7 +116,7 @@ body {
     content: '';
     width: 5px;
     height: 5px;
-    background: #9a7b6a;
+    background: inherit;
     border-radius: 50%;
     position: inherit;
     top: -2.5px;
