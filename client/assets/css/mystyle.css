@@ -1,7 +1,10 @@
-
 @font-face {
   font-family: "Poppins";
   src        : url("Poppins-Light.ttf");
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {

@@ -1,4 +1,3 @@
-
 var colors = Object.values(allColors())
 
 var defaultDNA = {
@@ -26,7 +25,7 @@ $( document ).ready(function() {
   $('#dnasky').html(defaultDNA.skyColor);
   $('#dnabubble').html(defaultDNA.bubbleColor);
     
-//   $('#dnashape').html(defaultDNA.eyesShape)
+  $('#dnashape').html(defaultDNA.eyesShape)
 //   $('#dnadecoration').html(defaultDNA.decorationPattern)
 //   $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
 //   $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
@@ -67,6 +66,7 @@ function renderCat(dna){
     $('#skyColor').val(dna.skyColor)
     bubbleColor(colors[dna.bubbleColor],dna.bubbleColor)
     $('#bubbleColor').val(dna.bubbleColor)
+   
 }
 
 // Changing cat colors
@@ -98,4 +98,9 @@ $('#skyColor').change(()=>{
 $('#bubbleColor').change(()=>{
   var colorVal = $('#bubbleColor').val()
   bubbleColor(colors[colorVal],colorVal)
+})
+
+$('#eyeshape').change(()=>{
+  var shape = parseInt($('#eyeshape').val())
+  eyeVariation(shape)
 })

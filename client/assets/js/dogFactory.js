@@ -67,6 +67,36 @@ function eyeVariation(num) {
             normalEyes()
             $('#eyeName').html('Basic')
             break
+        case 2:
+            normalEyes()
+            $('#eyeName').html('Chill')
+            return eyesType1()
+            break
+        case 3:
+            normalEyes()
+            $('#eyeName').html('Suprised')
+            return eyesType2()
+            break    
+        case 4:
+            normalEyes()
+            $('#eyeName').html('Tiny')
+            return eyesType3()
+            break   
+        case 5:
+            normalEyes()
+            $('#eyeName').html('Detective')
+            return eyesType4()
+            break
+        case 6:
+            normalEyes()
+            $('#eyeName').html('Stoner')
+            return eyesType5()
+            break
+        case 7:
+            normalEyes()
+            $('#eyeName').html('Cyclopes')
+            return eyesType6()
+            break                               
     }
 }
 
@@ -80,9 +110,58 @@ function decorationVariation(num) {
     }
 }
 
-async function normalEyes() {
-    await $('.cat__eye').find('span').css('border', 'none')
+function normalEyes() {
+    $('.eyes').css('border', 'none')
+    $('.eyes').css('height', '16px')
+    $('.eyes').css('width', '16px')
+    $('.eyes').css('border-radius', '50%')
+    $('.eyes').css('left', '140px')
+    $('.eyes').css('bottom', '180px')
+    $('.eyes').css('box-shadow', '65px 0 inherit')
+
 }
+function eyesType1() {
+    normalEyes()
+    $('.eyes').css('width', '20px')
+    $('.eyes').css('height', '10px')
+}
+function eyesType2() {
+    normalEyes()
+    $('.eyes').css('width', '20px')
+    $('.eyes').css('height', '40px')
+}
+function eyesType3() {
+    normalEyes()
+    $('.eyes').css('width', '5px')
+    $('.eyes').css('height', '5px')
+}
+function eyesType4() {
+    normalEyes()
+    $('.eyes').css('width', '50px')
+    $('.eyes').css('height', '30px')
+    $('.eyes').css('left', '121px')
+    $('.eyes').css('bottom', '170px')
+    $('.eyes').css('border-radius', '0 0 50% 50%')
+}
+function eyesType5() {
+    normalEyes()
+    $('.eyes').css('width', '50px')
+    $('.eyes').css('height', '22px')
+    $('.eyes').css('left', '124px')
+    $('.eyes').css('bottom', '179px')
+    $('.eyes').css('border-radius', '144% 138% 50% 50%')
+}
+function eyesType6() {
+    normalEyes()
+    $('.eyes').css('width', '69px')
+    $('.eyes').css('height', '50px')
+    $('.eyes').css('left', '144px')
+    $('.eyes').css('bottom', '184px')
+    $('.eyes').css('border-radius', '500%')
+    $('.eyes').css('border', '10px solid #ffffff')
+    $('.eyes').css('box-shadow', 'none')
+}
+
 
 async function normaldecoration() {
     //Remove all style from other decorations
