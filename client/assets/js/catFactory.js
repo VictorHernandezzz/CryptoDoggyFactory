@@ -21,6 +21,21 @@ function headColor(color,code) {
     $('#dnabody').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
 
+//This function is for the color of the eyes
+function eyesColor(color,code) {
+    $('.eyes').css('background', '#' + color)  //This changes the color of the eyes
+    $('.eyes').css('box-shadow', '65px' + ' 0' + ' #' + color)
+    $('#eyecode').html('code: ' + code) //This updates text of the badge next to the slider
+    $('#dnaeyes').html(code) //This updates the body color part of the DNA that is displayed below the cat
+}
+
+//This function is for the color of the ears
+function earsColor(color,code) {
+    $('.ear').css('background', '#' + color)  //This changes the color of the eyes
+    $('#earscode').html('code: ' + code) //This updates text of the badge next to the slider
+    $('#dnaears').html(code) //This updates the body color part of the DNA that is displayed below the cat
+}
+
 
 //###################################################
 //Functions below will be used later on in the project
