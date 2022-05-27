@@ -60,19 +60,19 @@ body {
 /*patch*/
 .dog:after, .head:after{
     content: '';
-    width: 110px;
-    height: 130px;
+    width: 69px;
+    height: 80px;
     border-radius: 50%;
-    background: #fcefcd;
+    background: #89766c;
     position: absolute;
 }
 .dog:after{
-    left: 0;
-    bottom: 70px;
+    left: 10px;
+    bottom: 69px;
 }
 .head:after{
-    left: -25px;
-    bottom: -30px;
+    left: -13;
+    bottom: -7px;
 }
 .eyes{
     width: 16px;

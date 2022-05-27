@@ -14,9 +14,9 @@ function genColors(){
     return colors
 }
 
-//This function code needs to modified so that it works with Your cat code.
+//This function code needs to modified so that it works with the dog code.
 function headColor(color,code) {
-    $('.cat__head, .cat__chest').css('background', '#' + color)  //This changes the color of the cat
+    $('.head, .dog').css('background', '#' + color)  //This changes the color of the dog
     $('#headcode').html('code: '+code) //This updates text of the badge next to the slider
     $('#dnabody').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
