@@ -43,6 +43,18 @@ function mouthColor(color,code) {
     $('#mouthcode').html('code: ' + code) //This updates text of the badge next to the slider
     $('#dnamouth').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
+//This function is for the color of the sky
+function skyColor(color,code) {
+    $('.doggy-container').css('background', '#' + color)  //This changes the color of the eyes
+    $('#skycode').html('code: ' + code) //This updates text of the badge next to the slider
+    $('#dnasky').html(code) //This updates the body color part of the DNA that is displayed below the cat
+}
+//This function is for the color of the bubble
+function bubbleColor(color,code) {
+    $('.bubble').css('background', '#' + color)  //This changes the color of the eyes
+    $('#bubblecode').html('code: ' + code) //This updates text of the badge next to the slider
+    $('#dnabubble').html(code) //This updates the body color part of the DNA that is displayed below the cat
+}
 
 
 //###################################################
