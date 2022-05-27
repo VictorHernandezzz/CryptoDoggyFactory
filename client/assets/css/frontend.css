@@ -3,6 +3,7 @@
 
 .frontend {
     height: 90vh;
+    width: fit-content;
     padding-top: 105px;    
     background: url('../images/banner.png') no-repeat;
     background-size: cover;
@@ -60,6 +61,7 @@ footer {
     height: 100px;
     padding: 4vh;
     background: #F8F8F8;
+    margin-top: 25px;
 }
 
 .featureBox {
