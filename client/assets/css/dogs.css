@@ -57,6 +57,40 @@ body {
     margin: auto;
     overflow: hidden;
 }
+
+.head-dots {
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    background: #0084ffa8;
+    left: 78px;
+    top: 20px;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(360deg);
+}
+
+.head-dots_first {
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    background: #0084ffa8;
+    right: 20px;
+    bottom: 5px;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(360deg);
+}
+
+.head-dots_second {
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    background: #0084ffa8;
+    left: 20px;
+    bottom: 5px;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(360deg);
+}
+
 .eyes{
     width: 16px;
     height: 16px;

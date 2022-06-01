@@ -55,6 +55,20 @@ function bubbleColor(color,code) {
     $('#dnabubble').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
 
+function decorationMidColorVar(color,code) {
+    console.log(color + code)
+    $('.head-dots').css('background', '#' + color)  //This changes the color of Mid head decoration
+    $('#decorationMidCode').html('code: '+code) //This updates text of the badge next to the slider
+    $('#dnadecorationMid').html(code) //This updates the body color part of the DNA that is displayed below the cat
+}
+
+function decorationSidesColorVar(color,code) {
+    console.log(color + code)
+    $('.head-dots_first, .head-dots_second').css('background', '#' + color)  //This changes the color of Sides head decoration
+    $('#decorationSidesCode').html('code: '+code) //This updates text of the badge next to the slider
+    $('#dnadecorationSides').html(code) //This updates the body color part of the DNA that is displayed below the cat
+}
+
 
 //###################################################
 //Functions below will be used later on in the project
@@ -107,8 +121,46 @@ function decorationVariation(num) {
             $('#decorationName').html('Basic')
             normaldecoration()
             break
+            case 2:
+                normaldecoration()
+                $('#decorationName').html('Tribal')
+                return decorationType1()
+                break   
+            case 3:
+                normaldecoration()
+                $('#decorationName').html('Big')
+                return decorationType2()
+                break 
+            case 4:
+                normaldecoration()
+                $('#decorationName').html('Funny')
+                return decorationType3()
+                break   
+            case 5:
+                normaldecoration()
+                $('#decorationName').html('Round')
+                return decorationType4()
+                break                
     }
 }
+
+function animationsPlayer(anim) {
+    $('#dnaanimation').html(anim)
+    switch (anim) {
+        case 1:
+            $('#animationName').html('None')
+             resetAnimation()
+            break
+        case 2:
+            $('#animationName').html('Wobbely Head')
+            return animationType1();
+            break
+        case 3:
+            $('#animationName').html('Big Ears')
+            return animationType2();                break    
+        }
+}
+
 
 function normalEyes() {
     $('.eyes').css('border', 'none')
@@ -163,10 +215,58 @@ function eyesType6() {
 }
 
 
-async function normaldecoration() {
+function normaldecoration() {
     //Remove all style from other decorations
     //In this way we can also use normalDecoration() to reset the decoration style
-    $('.cat__head-dots').css({ "transform": "rotate(0deg)", "height": "48px", "width": "14px", "top": "1px", "border-radius": "0 0 50% 50%" })
-    $('.cat__head-dots_first').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
-    $('.cat__head-dots_second').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
+    $('.head-dots').css({ "transform": "rotate(360deg)", "height": "30px", "width": "10px", "top": "20px", "left": "78px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_first').css({ "transform": "rotate(360deg)", "height": "30px", "width": "10px", "bottom": "5px", "right": "20px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_second').css({ "transform": "rotate(360deg)", "height": "30px", "width": "10px", "bottom": "5px", "left": "20px", "border-radius": "50% 50% 50% 50%" })
+}
+
+function decorationType1() {
+    //Remove all style from other decorations
+    //In this way we can also use normalDecoration() to reset the decoration style
+    $('.head-dots').css({ "transform": "rotate(360deg)", "height": "40px", "width": "10px", "top": "20px", "left": "78px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_first').css({ "transform": "rotate(323deg)", "height": "40px", "width": "10px", "bottom": "5px", "right": "20px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_second').css({ "transform": "rotate(215deg)", "height": "40px", "width": "10px", "bottom": "5px", "left": "20px", "border-radius": "50% 50% 50% 50%" })
+}
+
+function decorationType2() {
+    //Remove all style from other decorations
+    //In this way we can also use normalDecoration() to reset the decoration style
+    $('.head-dots').css({ "transform": "rotate(360deg)", "height": "40px", "width": "30px", "top": "20px", "left": "70px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_first').css({ "transform": "rotate(270deg)", "height": "40px", "width": "30px", "bottom": "5px", "right": "20px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_second').css({ "transform": "rotate(225deg)", "height": "40px", "width": "30px", "bottom": "5px", "left": "20px", "border-radius": "50% 50% 50% 50%" })
+}
+
+function decorationType3() {
+    //Remove all style from other decorations
+    //In this way we can also use normalDecoration() to reset the decoration style
+    $('.head-dots').css({ "transform": "rotate(360deg)", "height": "40px", "width": "10px", "top": "20px", "left": "78px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_first').css({ "transform": "rotate(323deg)", "height": "40px", "width": "10px", "bottom": "5px", "right": "20px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_second').css({ "transform": "rotate(215deg)", "height": "40px", "width": "10px", "bottom": "5px", "left": "20px", "border-radius": "50% 50% 50% 50%" })
+}
+
+function decorationType4() {
+    //Remove all style from other decorations
+    //In this way we can also use normalDecoration() to reset the decoration style
+    $('.head-dots').css({ "transform": "rotate(360deg)", "height": "40px", "width": "30px", "top": "20px", "left": "70px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_first').css({ "transform": "rotate(270deg)", "height": "40px", "width": "30px", "bottom": "5px", "right": "20px", "border-radius": "50% 50% 50% 50%" })
+    $('.head-dots_second').css({ "transform": "rotate(225deg)", "height": "40px", "width": "30px", "bottom": "5px", "left": "20px", "border-radius": "50% 50% 50% 50%" })
+}
+
+function animationType1() {
+    resetAnimation();
+    $(".bubble").addClass("movingHead");
+}
+
+ function animationType2() {
+    resetAnimation();
+    $(".ear").addClass("earScale");
+ }
+
+
+function resetAnimation(){
+    $(".bubble").removeClass("movingHead");
+    $(".ear").removeClass("earScale");
 }

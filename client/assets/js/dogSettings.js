@@ -26,10 +26,10 @@ $( document ).ready(function() {
   $('#dnabubble').html(defaultDNA.bubbleColor);
     
   $('#dnashape').html(defaultDNA.eyesShape)
-//   $('#dnadecoration').html(defaultDNA.decorationPattern)
-//   $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
-//   $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
-//   $('#dnaanimation').html(defaultDNA.animation)
+  $('#dnadecoration').html(defaultDNA.decorationPattern)
+  $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
+  $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
+  $('#dnaanimation').html(defaultDNA.animation)
 //   $('#dnaspecial').html(defaultDNA.lastNum)
 
   renderCat(defaultDNA)
@@ -66,8 +66,17 @@ function renderCat(dna){
     $('#skyColor').val(dna.skyColor)
     bubbleColor(colors[dna.bubbleColor],dna.bubbleColor)
     $('#bubbleColor').val(dna.bubbleColor)
-   
-}
+    eyeVariation(dna.eyesShape)
+    $('eyeshape').val(dna.eyesShape)
+    decorationVariation(dna.decorationPattern)
+    $('#decorationstyle').val(dna.decorationPattern)
+    decorationMidColorVar([dna.decorationMidcolor],dna.decorationMidcolor)
+    $('#decMidColor').val(dna.decorationMidcolor)
+    decorationSidesColorVar([dna.decorationSidescolor],dna.decorationSidescolor)
+    $('#decSideColor').val(dna.decorationSidescolor)
+    animationsPlayer([dna.animation], dna.animation)
+    $('#animation').val(dna.animation)
+} 
 
 // Changing cat colors
 $('#bodycolor').change(()=>{
@@ -103,4 +112,27 @@ $('#bubbleColor').change(()=>{
 $('#eyeshape').change(()=>{
   var shape = parseInt($('#eyeshape').val())
   eyeVariation(shape)
+})
+
+$('#decorationstyle').change(()=>{
+  var decostyle = parseInt($('#decorationstyle').val())
+  decorationVariation(decostyle)
+})
+
+$('#decMidColor').change(()=>{
+  var colorVal = $('#decMidColor').val()
+  console.log(colorVal)
+  decorationMidColorVar(colors[colorVal],colorVal)
+})
+
+$('#decSideColor').change(()=>{
+  var colorVal = $('#decSideColor').val()
+  console.log(colorVal)
+  decorationSidesColorVar(colors[colorVal],colorVal)
+})
+
+$('#animation').change(()=>{
+  var anim = parseInt($('#animation').val())
+  console.log(anim)
+  animationsPlayer(anim)
 })
