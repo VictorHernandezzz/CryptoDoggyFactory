@@ -31,6 +31,7 @@ $( document ).ready(function() {
   $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
   $('#dnaanimation').html(defaultDNA.animation)
 //   $('#dnaspecial').html(defaultDNA.lastNum)
+  
 
   renderCat(defaultDNA)
 });

@@ -231,3 +231,11 @@ body {
     transform: rotate(-30deg);
     z-index: 1;
 }
+
+.dogColorsClass {
+    display: none;
+}
+
+.dogAttributesClass {
+    display: none;
+}

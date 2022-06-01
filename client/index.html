@@ -6,8 +6,6 @@
 
         <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <script src="assets/bootstrap/js/popper.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="assets/css/mystyle.css">
         <link rel="stylesheet" href="assets/css/dogs.css">
         <link rel="stylesheet" href="assets/css/animations.css">
@@ -69,8 +67,18 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 cattributes light-b-shadow" >
+                <!--Navigation for Colors and Attributes-->
+                <ul class="nav nav-pills nav-justified">
+                    <li id="colorsMenuBtn" class="nav-item colorsMenuClass">
+                      <a class="nav-link active" href="#dogNav">Colors</a>
+                    </li>
+                    <li id="attributesMenuBtn" class="nav-item attributesMenuClass">
+                      <a class="nav-link active" href="#dogNav">Attributes</a>
+                    </li>
+                  </ul>
+                  <br>
                 <!-- Cat colors -->
-                <div id="catColors">
+                <div id="dogColors" class="dogColorsClass">
                     <div class="form-group">
                         <label for="formControlRange"><b>Head Color</b><span class="badge badge-dark ml-2" id="headcode"></span></label>
                         <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
@@ -102,16 +110,6 @@
                         <br>
                     </div>
                     <div class="form-group">
-                        <label for="formControlRange"><b>Eye Shape</b><span class="badge badge-dark ml-2" id="eyeName"></span></label>
-                        <input type="range" min="1" max="7" class="form-control-range" id="eyeshape">
-                        <br>
-                    </div>
-                    <div class="form-group">
-                        <label for="formControlRange"><b>Patch Decoration</b><span class="badge badge-dark ml-2" id="decorationName"></span></label>
-                        <input type="range" min="1" max="5" class="form-control-range" id="decorationstyle">
-                        <br>
-                    </div>
-                    <div class="form-group">
                         <label for="formControlRange"><b>Patch Middle Color</b><span class="badge badge-dark ml-2" id="decorationMidCode"></span></label>
                         <input type="range" min="10" max="98" class="form-control-range" id="decMidColor">
                         <br>
@@ -119,6 +117,18 @@
                     <div class="form-group">
                         <label for="formControlRange"><b>Patch Side Color</b><span class="badge badge-dark ml-2" id="decorationSidesCode"></span></label>
                         <input type="range" min="10" max="98" class="form-control-range" id="decSideColor">
+                        <br>
+                    </div>
+                </div>
+                <div class="dogAttributesClass">
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Eye Shape</b><span class="badge badge-dark ml-2" id="eyeName"></span></label>
+                        <input type="range" min="1" max="7" class="form-control-range" id="eyeshape">
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Patch Decoration</b><span class="badge badge-dark ml-2" id="decorationName"></span></label>
+                        <input type="range" min="1" max="5" class="form-control-range" id="decorationstyle">
                         <br>
                     </div>
                     <div class="form-group">
@@ -135,6 +145,9 @@
             <p>Victor Valdez GoodGains Exchange 2022</p>
         </footer>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/buttons.js"></script>
         <script src="assets/js/colors.js"></script>
         <script src="assets/js/dogSettings.js"></script>
         <script src="assets/js/dogFactory.js"></script>
