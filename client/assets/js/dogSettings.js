@@ -1,17 +1,16 @@
 var colors = Object.values(allColors())
 
 var defaultDNA = {
-    "headcolor" : 33,
+    "headColor" : 33,
     "mouthColor" : 20,
     "eyesColor" : 74,
     "earsColor" : 23,
     "skyColor": 88,
     "bubbleColor": 73,
-    //Cattributes
     "eyesShape" : 1,
     "decorationPattern" : 1,
-    "decorationMidcolor" : 13,
-    "decorationSidescolor" : 13,
+    "decorationMidcolor" : 88,
+    "decorationSidescolor" : 88,
     "animation" :  1,
     "lastNum" :  1
     }
@@ -30,8 +29,8 @@ $( document ).ready(function() {
   $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
   $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
   $('#dnaanimation').html(defaultDNA.animation)
-//   $('#dnaspecial').html(defaultDNA.lastNum)
-  
+  $('#dnaspecial').html(defaultDNA.lastNum)
+
 
   renderCat(defaultDNA)
 });
@@ -55,8 +54,8 @@ function getDna(){
 }
 
 function renderCat(dna){
-    headColor(colors[dna.headcolor],dna.headcolor)
-    $('#bodycolor').val(dna.headcolor)
+    headColor(colors[dna.headColor],dna.headColor)
+    $('#bodycolor').val(dna.headColor)
     eyesColor(colors[dna.eyesColor],dna.eyesColor)
     $('#eyesColor').val(dna.eyesColor)
     earsColor(colors[dna.earsColor],dna.earsColor)
@@ -68,7 +67,7 @@ function renderCat(dna){
     bubbleColor(colors[dna.bubbleColor],dna.bubbleColor)
     $('#bubbleColor').val(dna.bubbleColor)
     eyeVariation(dna.eyesShape)
-    $('eyeshape').val(dna.eyesShape)
+    $('#eyeshape').val(dna.eyesShape)
     decorationVariation(dna.decorationPattern)
     $('#decorationstyle').val(dna.decorationPattern)
     decorationMidColorVar([dna.decorationMidcolor],dna.decorationMidcolor)

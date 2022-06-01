@@ -255,6 +255,11 @@ function decorationType4() {
     $('.head-dots_second').css({ "transform": "rotate(225deg)", "height": "40px", "width": "30px", "bottom": "5px", "left": "20px", "border-radius": "50% 50% 50% 50%" })
 }
 
+function resetAnimation(){
+    $(".bubble").removeClass("movingHead");
+    $(".ear").removeClass("earScale");
+}
+
 function animationType1() {
     resetAnimation();
     $(".bubble").addClass("movingHead");
@@ -264,9 +269,3 @@ function animationType1() {
     resetAnimation();
     $(".ear").addClass("earScale");
  }
-
-
-function resetAnimation(){
-    $(".bubble").removeClass("movingHead");
-    $(".ear").removeClass("earScale");
-}
